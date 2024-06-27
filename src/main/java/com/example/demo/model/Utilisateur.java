@@ -35,6 +35,9 @@ public class Utilisateur {
     @OneToMany(mappedBy = "createur", fetch = FetchType.EAGER)
     protected List<Quizz> listeQuizz;
 
+    @OneToMany(mappedBy = "utilisateur", fetch = FetchType.EAGER)
+    protected List<ReponseUtilisateur> listeReponseutilisateur;
+
 
     protected boolean administrateur;
 
