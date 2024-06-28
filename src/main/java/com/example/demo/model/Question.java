@@ -34,7 +34,4 @@ public class Question {
     @OneToMany(mappedBy = "question", fetch = FetchType.EAGER)
     protected List<ReponsePossible> listeReponses;
 
-    @OneToMany(mappedBy = "question", fetch = FetchType.EAGER)
-    protected List<ReponseUtilisateur> listeReponseUtilisateur;
-
 }

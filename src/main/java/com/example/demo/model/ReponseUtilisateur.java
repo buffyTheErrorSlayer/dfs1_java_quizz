@@ -18,16 +18,10 @@ public class ReponseUtilisateur {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected Integer id;
 
-    @NotBlank
-    @NotNull
-    @Column(columnDefinition = "TEXT")
-    protected String texte;
-
-
     @ManyToOne(optional = false)
     protected Utilisateur utilisateur;
 
     @ManyToOne
-    protected Question question;
+    protected ReponsePossible reponsePossible;
 
 }

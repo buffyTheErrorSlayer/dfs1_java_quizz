@@ -8,6 +8,8 @@ import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 @Getter
 @Setter
 @Entity
@@ -24,8 +26,11 @@ public class ReponsePossible {
     protected String texte;
 
     protected boolean reponseJuste;
-
+    
     @ManyToOne(optional = false)
     protected Question question;
+
+    @OneToMany(mappedBy = "reponsePossible", fetch = FetchType.EAGER)
+    protected List<ReponseUtilisateur> listeReponseUtilisateur;
 
 }
